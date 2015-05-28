@@ -25,7 +25,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<link href='http://fonts.googleapis.com/css?family=Asap|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="style.css?rev=6ef52df1b89c477a7aa9f7ce09c094d0">
+	<link rel="stylesheet" href="style.css?rev=be17d2760fb63af950f8ec5875ec736b">
 	<style type="text/css">[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }</style>
@@ -149,8 +149,26 @@
 					}">
 			<div class="yt-player ux-maker">
 				<div id="gp-share" class="pull-left">
-					<a href="" title="Share Now Playing Media With Your Circles"><img
-					  src="https://www.gstatic.com/images/icons/gplus-32.png" alt="Share on Google+"/></a>
+					<button class="btn btn-danger"
+						socialshare
+						socialshare-provider="google+"
+						socialshare-text="Listening to {{ vm.video.media.snippet.title }}"
+						socialshare-hashtags="echotube, youtube video, nowlistening"
+						socialshare-url="http://echotu.be/#/video/{{ vm.video.mediaId }}">
+						<span class="fa fa-google-plus-square"></span>
+					</button>
+					<button class="btn btn-info"
+						socialshare
+						socialshare-provider="twitter"
+						socialshare-url="http://echotu.be/#/video/{{ vm.video.mediaId }}">
+						<span class="fa fa-twitter-square"></span>
+					</button>
+					<button class="btn btn-info"
+						socialshare
+						socialshare-provider="facebook"
+						socialshare-url="http://echotu.be/#/video/{{ vm.video.mediaId }}">
+						<span class="fa fa-facebook-square"></span>
+					</button>
 				</div>
 				<!-- <div id="facebook-like" class="facebook-like pull-left"></div> -->
 				<div id="player" class="ux-maker"
@@ -354,11 +372,12 @@
 	<script type="text/javascript" src="../bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
 	<script type="text/javascript" src="../bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
 	<script type="text/javascript" src="../bower_components/ng-sortable/dist/ng-sortable.min.js"></script>
+	<script type="text/javascript" src="../bower_components/angularjs-socialshare/dist/angular-socialshare.min.js"></script>
 	-->
 	<!-- endbuild -->
-	<script src="vendors.js?rev=e328cdba7f46551f5915586f6bebd4e8"></script>
-	<script src="bundle.js?rev=2b5e440cb3470adda3de8a88260f37c1"></script>
-	<script src="templates.mdl.js?rev=41b80f47c97531def5b1607d2825fcbb"></script>
+	<script src="vendors.js?rev=a4a5acf2bb1f6c94677e487f43952d5f"></script>
+	<script src="bundle.js?rev=9b50b71625ac6707b245a50eaf5443a7"></script>
+	<script src="templates.mdl.js?rev=37686b08474bf9b8649cffcacb6fa17c"></script>
 	<!-- <script src="app/templates.mdl.js"></script> -->
 	<script type="text/javascript">
 
