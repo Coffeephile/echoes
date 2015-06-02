@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "0.10"
+branches:
+  only:
+    - master
+    - gh-pages
+
+install:
+  - npm install -g bower
+  - npm install -g gulp
+  # - npm install phantomjs
+  - npm install -g karma
+  - bower install
+  - npm run build
