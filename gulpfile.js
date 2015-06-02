@@ -17,3 +17,10 @@ gulp.task('copy:dist', function () {
   ])
   .pipe(gulp.dest('./'));
 })
+
+gulp.task('copy:specs', function () {
+  return gulp.src([
+    'dist/tests/specs/*/**'
+  ])
+  .pipe(gulp.dest('./specs'));
+})

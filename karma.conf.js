@@ -5,7 +5,7 @@ module.exports = function(config) {
 	var client_dir = '';
 
 	config.set({
-		basePath: './src',
+		// basePath: './',
 		browsers: browsers,
 		frameworks: ['jasmine'],
 		files: [
@@ -14,7 +14,7 @@ module.exports = function(config) {
 			
 			'bundle.js',
 			'templates.mdl.js',
-			'tests/specs/**/*spec.js',
+			'specs/**/*spec.js',
 			'tests/mocks/**/*mock.json'
 	    ],
 	    autoWatch: true,
