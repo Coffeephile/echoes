@@ -25,7 +25,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<link href='http://fonts.googleapis.com/css?family=Asap|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="style.css?rev=@@hash">
+	<link rel="stylesheet" href="style.css?rev=4fe86ad7d567a1421416f7023bbe35ff">
 	<style type="text/css">[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }</style>
@@ -47,6 +47,7 @@
 						<div class="form-group">
 							<input placeholder="Explore Media" id="media-search" type="search" class="form-control" autocomplete="off"
 								ng-model="vm.params.q"
+								ng-change="vm.resetPageToken()"
 								typeahead="q for q in vm.complete($viewValue)"
 								typeahead-on-select="vm.updateSearch($item, $model, $label)"
 								>
@@ -112,6 +113,14 @@
 									<li>
 										<a href="http://github.com/orizens/echoes" target="_blank">
 										<i class="fa fa-github"></i> About Echoes</a>
+									</li>
+									<li>
+										<a href="http://github.com/orizens/echoes/issues" target="_blank">
+										<i class="fa fa-medkit"></i> Report An Issue</a>
+									</li>
+									<li>
+										<a href="http://github.com/orizens/echoes/issues" target="_blank">
+										<i class="fa fa-lightbulb-o"></i> Suggest A New Feature</a>
 									</li>
 									<li>
 										<a href="https://chrome.google.com/webstore/detail/echoes-player/aaenpaopfebcmdaegggjbkhaedlbbkde" target="_blank">
@@ -375,9 +384,9 @@
 	<script type="text/javascript" src="../bower_components/angularjs-socialshare/dist/angular-socialshare.min.js"></script>
 	-->
 	<!-- endbuild -->
-	<script src="vendors.js?rev=@@hash"></script>
-	<script src="bundle.js?rev=9b50b71625ac6707b245a50eaf5443a7"></script>
-	<script src="templates.mdl.js?rev=37686b08474bf9b8649cffcacb6fa17c"></script>
+	<script src="vendors.js?rev=a4a5acf2bb1f6c94677e487f43952d5f"></script>
+	<script src="bundle.js?rev=90103efe8267e2295a4237aa75e08a02"></script>
+	<script src="templates.mdl.js?rev=6110ec6e3c2ab475aab84bde60d8f491"></script>
 	<!-- <script src="app/templates.mdl.js"></script> -->
 	<script type="text/javascript">
 
