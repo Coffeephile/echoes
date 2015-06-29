@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var karma = require('karma').server;
 var isTravis = process.env.TRAVIS || false;
 var pathToKarmaConf = __dirname;
+var webserver = require('gulp-webserver');
 
 gulp.task('test', function (done) {
   karma.start({
@@ -23,4 +24,17 @@ gulp.task('copy:specs', function () {
     'dist/tests/specs/*/**'
   ])
   .pipe(gulp.dest('./specs'));
+})
+
+gulp.task('serve', function() {
+  gulp.src([
+    './',
+    '.tmp'
+    ])
+    .pipe(webserver({
+      livereload: true,
+      // directoryListing: true,
+      // open: true,
+      port: 9001
+    }));
 })
