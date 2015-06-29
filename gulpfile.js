@@ -11,7 +11,7 @@ gulp.task('test', function (done) {
   }, done);
 });
 
-gulp.task('copy:dist', ['copy:specs'], function () {
+gulp.task('copy:dist', ['copy:specs', 'copy:tests'], function () {
   return gulp.src([
     'dist/*/**.*',
     'dist/*.*'
@@ -21,9 +21,16 @@ gulp.task('copy:dist', ['copy:specs'], function () {
 
 gulp.task('copy:specs', function () {
   return gulp.src([
-    'dist/tests/specs/*/**'
+    'dist/specs/*/**'
   ])
   .pipe(gulp.dest('./specs'));
+})
+
+gulp.task('copy:tests', function () {
+  return gulp.src([
+    'dist/tests/*/**'
+  ])
+  .pipe(gulp.dest('./tests'));
 })
 
 gulp.task('serve', function() {
