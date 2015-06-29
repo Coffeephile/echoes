@@ -26,7 +26,7 @@ describe("Media Search", function() {
 		scope.vm.params.q = 'some random text ' + Date().toString();
 		scope.$digest();
 		expect(YoutubeSearch.resetPageToken).toHaveBeenCalled();
-		expect(YoutubeSearch.resetPageToken.calls.count()).toBe(2);
+		expect(YoutubeSearch.resetPageToken.calls.count()).toBe(1);
 	});
 
 });
