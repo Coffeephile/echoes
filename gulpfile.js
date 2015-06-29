@@ -11,7 +11,7 @@ gulp.task('test', function (done) {
   }, done);
 });
 
-gulp.task('copy:dist', function () {
+gulp.task('copy:dist', ['copy:specs'], function () {
   return gulp.src([
     'dist/*/**.*',
     'dist/*.*'

@@ -27,7 +27,7 @@ describe("Media Search", function() {
 		scope.vm.resetPageToken();
 		scope.$digest();
 		expect(YoutubeSearch.resetPageToken).toHaveBeenCalled();
-		// expect(YoutubeSearch.resetPageToken.calls.count()).toBe(1);
+		expect(YoutubeSearch.resetPageToken.calls.count()).toBe(1);
 	});
 
 });
