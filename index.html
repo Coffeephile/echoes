@@ -209,7 +209,8 @@
 							
 									
 							<button class="btn btn-default btn-lg navbar-btn previous"
-								ng-click="vm.playPreviousTrack()">
+								ng-click="vm.playPreviousTrack()"
+								ng-disabled="!vm.playlistHasTracks()">
 								<i class="fa fa-step-backward"></i></button>
 								
 							<button class="btn btn-default btn-lg navbar-btn pause"
@@ -222,6 +223,7 @@
 								
 							<button class="btn btn-default btn-lg navbar-btn next" 
 								ng-click="vm.playNextTrack()"
+								ng-disabled="vm.playlistIsEmpty() || vm.playlistHasOneTrack()"
 								><i class="fa fa-step-forward"></i></button>
 						</div>
 					</li>
@@ -387,8 +389,8 @@
 	<![endif]-->
 	<!-- endbuild -->
 	<script src="vendors.js?rev=d457246376f3c5a6b30388dc844015ae"></script>
-	<script src="bundle.js?rev=49f9dcef1804cc346d9a1484b1022fb3"></script>
-	<script src="templates.mdl.js?rev=bb84c555be0ae57beee735e558056f55"></script>
+	<script src="bundle.js?rev=1b7446edffa8106616c21a5ed08aa194"></script>
+	<script src="templates.mdl.js?rev=3351b875d8fe1ccad629093da7c82f2f"></script>
 	<!-- <script src="app/templates.mdl.js"></script> -->
 	<script type="text/javascript">
 
